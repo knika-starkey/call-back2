@@ -23,42 +23,22 @@ function printProducts(products) {
     );
   }
 }
-function compareSold(colaA, colaB) {
-  if (colaA.sold > colaB.sold) {
-    return 1;
-  } else if (colaA.sold === colaB.sold) {
-    return 0;
-  } else {
-    return -1;
-  }
-}
-function compareName(colaA, colaB) {
-  if (colaA.name > colaB.name) {
-    return 1;
-  } else if (colaA.name === colaB.name) {
-    return 0;
-  } else {
-    return -1;
-  }
-}
-function compareСalories(colaA, colaB) {
-  if (colaA.calories > colaB.calories) {
-    return 1;
-  } else if (colaA.calories === colaB.calories) {
-    return 0;
-  } else {
-    return -1;
-  }
-}
-function compareСolor(colaA, colaB) {
-  if (colaA.color > colaB.color) {
-    return 1;
-  } else if (colaA.color === colaB.color) {
-    return 0;
-  } else {
-    return -1;
-  }
-}
+let compareSold = (colaA, colaB) => {
+  return colaA.sold > colaB.sold ? 1 : colaA.sold === colaB.sold ? 0 : -1;
+};
+let compareName = (colaA, colaB) => {
+  return colaA.name > colaB.name ? 1 : colaA.name === colaB.name ? 0 : -1;
+};
+let compareСalories = (colaA, colaB) => {
+  return colaA.calories > colaB.calories
+    ? 1
+    : colaA.calories === colaB.calories
+    ? 0
+    : -1;
+};
+let compareСolor = (colaA, colaB) => {
+  return colaA.color > colaB.color ? 1 : colaA.color === colaB.color ? 0 : -1;
+};
 printProducts(products);
 products.sort(compareSold);
 document.write("Sold:<br>");
